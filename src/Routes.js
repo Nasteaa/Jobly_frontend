@@ -29,6 +29,9 @@ function Routes({handleSignUp, handleApply, handleSignIn}) {
       <Route exact path="/signin" >
         <SignIn handleSignIn={handleSignIn} />
       </Route>
+       <Route exact path="/signout" >
+        <Homepage />
+      </Route>
       <Route>
         <Redirect to="/" />
       </Route>

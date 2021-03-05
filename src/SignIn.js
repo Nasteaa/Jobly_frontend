@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import {useHistory} from "react-router-dom";
+import { Button, Form, FormGroup, Input } from "reactstrap";
+import './SignIn.css';
 
 function SignIn({handleSignIn}) {
   const history = useHistory();
@@ -34,20 +36,23 @@ function SignIn({handleSignIn}) {
   }
 
   return (
-    <div>
+    <div className="fade-in">
+      <div className="login-container">
+      <h1 className="cloud-text hvr-home-grow">Log In</h1>
       {renderError()}
-      <form onSubmit={handleSubmit}>
-      <label>Username:</label>
-      <input type="text" name="username" value={formData.username} onChange={handleChange} />
-      <br/>
-      <label>Password:</label>
-      <input type="password" name="password" value={formData.password} onChange={handleChange}/>
-      <br/>
-      <button type="submit">Sign In</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+        <FormGroup>
+          <Input type="text" name="username" value={formData.username} onChange={handleChange} placeholder="username" />
+        </FormGroup>  
+        <FormGroup>
+          <Input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="password"/>
+        </FormGroup>
+          <br/>
+      <Button className="btn" type="submit">Sign In</Button>
+      </Form>
+      </div>
     </div>
   );
-
 }
 
 export default SignIn;

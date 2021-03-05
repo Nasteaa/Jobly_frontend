@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-
+import { Button } from "reactstrap";
+import './Job.css'
 
 function Job({id, title, salary, equity, companyName, hasApplied, handleApply}) {
 
@@ -18,14 +19,14 @@ function Job({id, title, salary, equity, companyName, hasApplied, handleApply}) 
   
   function renderApplied() {
     if(applied) {
-      return ( <button disabled>Applied</button> )
+      return ( <Button className="app-btn" disabled>Applied</Button> )
     } else {
-      return ( <button onClick={apply}>Apply</button>)
+      return ( <Button className="app-btn" onClick={apply}>Apply</Button>)
     }
   }
 
   return (
-    <div style={{border: "1px blue solid", "margin-bottom": "5px"}}>
+      <div className="job-container" style={{border: "black 1px solid", "margin-bottom": "5px"}}>
       <h4>{title}</h4>
       {renderCompanyName()}
       <p>Salary: {salary}</p>

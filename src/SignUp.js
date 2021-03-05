@@ -1,7 +1,9 @@
-import React, {useState} from "react";
-import {useHistory} from "react-router-dom";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { Button, Label, Form, FormGroup, Input } from "reactstrap";
 
-function SignUp({handleSignUp}) {
+
+function SignUp({ handleSignUp }) {
   const history = useHistory();
   const [formData, setFormData] = useState({})
   const [error, setError] = useState();
@@ -10,17 +12,17 @@ function SignUp({handleSignUp}) {
     evt.preventDefault();
     // We need to make our app aware of us having signed in/up
     let res = await handleSignUp(formData);
-    if(res.success) {
+    if (res.success) {
       history.push("/");
     } else {
-      setFormData({username: "", password: ""});
+      setFormData({ username: "", password: "" });
       setError(res.err);
 
     }
   }
 
   function handleChange(evt) {
-    const {name, value} = evt.target;
+    const { name, value } = evt.target;
     setFormData(data => (
       {
         ...data,
@@ -30,33 +32,39 @@ function SignUp({handleSignUp}) {
   }
 
   function renderError() {
-    if(error) {
-      return (<h3 style={{color: "red"}}>{error}</h3>)
+    if (error) {
+      return (<h3 style={{ color: "red" }}>{error}</h3>)
     }
   }
 
   return (
-    <div>
-      <h3>Sign Up</h3>
+<div className="fade-in">
+      <div className="login-container sign-up-border">
+      <h1 className="cloud-text hvr-home-grow">Sign Up</h1>
       {renderError()}
-      <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input name="username" value={formData.username} onChange={handleChange}/>
-        <br/>
-        <label>Password</label>
-        <input type="password" name="password" value={formData.password} onChange={handleChange}/>
-        <br/>
-        <label>First Name</label>
-        <input name="firstName" value={formData.firstName} onChange={handleChange}/>
-        <br/>
-        <label>Last Name</label>
-        <input name="lastName" value={formData.lastName} onChange={handleChange}/>
-        <br/>
-        <label>Email</label>
-        <input name="email" value={formData.email} onChange={handleChange}/>
-        <br/>
-        <button type="submit">Submit</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+         <FormGroup>
+           <Label className="label"> Personal Details</Label>
+          <Input name="firstName" value={formData.firstName} onChange={handleChange} placeholder="first name" />
+        </FormGroup>
+        <FormGroup>
+          <Input name="lastName" value={formData.lastName} onChange={handleChange} placeholder="last name" />
+        </FormGroup>
+        <FormGroup>
+          <Input name="email" value={formData.email} onChange={handleChange} placeholder="email" />
+        </FormGroup>
+        <br />
+        <FormGroup>
+          <Label className="label">Login Details</Label>
+          <Input name="username" value={formData.username} onChange={handleChange} placeholder="username"/>
+        </FormGroup>
+        <FormGroup>
+          <Input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="password" />
+        </FormGroup>
+        <br />
+        <Button type="submit">Submit</Button>
+      </Form>
+    </div>
     </div>
   );
 }

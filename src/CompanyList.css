@@ -1,0 +1,52 @@
+@media (min-width:800px) {
+    .content {
+        padding: 6rem 20rem;
+    }
+}
+
+/* 411 width x 731 length */
+
+@media (max-width:800px) {
+    .content {
+        padding: 6rem 2rem;
+    }
+}
+
+.content-form {
+    padding: 2rem;
+    justify-content: center;
+}
+
+.form-cotainer {
+    min-width: 50%;
+}
+
+.input {
+    width: 75%;
+}
+
+.company-container {
+    border-radius: 5px;
+    border: 4px solid #28527a !important;
+    padding: 20px;
+    text-decoration: none;
+    color: #28527a;
+    margin-bottom: 1rem !important;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
+
+.content-btn {
+    color: #faf3e0 !important;
+    background-color: #28527a !important;
+    border: 2px solid #faf3e0 !important;
+    border-radius: 10%;
+    padding: 0.8rem;
+}
+
+.content-btn:hover {
+    color: #28527a !important;
+    background-color: white !important;
+    border: 2px solid #28527a !important;
+    border-radius: 10%;
+    padding: 0.8rem;
+}

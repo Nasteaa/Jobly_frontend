@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import JoblyApi from "./api";
 import Job from "./Job";
-
+import { Button, Form, Input } from "reactstrap";
 import UserContext from "./UserContext";
 
 function JobList({handleApply}) {
@@ -54,11 +54,13 @@ function JobList({handleApply}) {
 
 
   return (
-    <div>
-    <form onSubmit={handleSubmit}>
-      <input name="query" onChange={ handleChange } value={ formData.query } placeholder="Enter search term"/>
-      <button type="submit">Search</button>
-    </form>
+     <div className="content">
+      <div className="form-container">
+      <Form inline className="content-form" onSubmit={handleSubmit}>
+        <Input className="w-50" name="query" onChange={ handleChange } value={ formData.query } placeholder="Enter search term" bsSize="lg"/>
+        <Button className="content-btn" type="submit">Search</Button>
+      </Form>
+      </div>
     { renderJobs() }
   </div>
   );

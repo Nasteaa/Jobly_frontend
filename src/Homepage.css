@@ -1,0 +1,99 @@
+div {
+    font-family: 'Slabo 27px', serif;
+}
+
+.fade-in {
+    position: relative;
+    display: flex;
+    text-align: center;
+    -webkit-animation: fadein 8s forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 8s forwards;
+    /* Firefox < 16 */
+    -ms-animation: fadein 8s forwards;
+    /* Internet Explorer */
+    -o-animation: fadein 8s forwards;
+    /* Opera < 12.1 */
+    animation: fadein 8s forwards;
+    z-index: 1;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hvr-home-grow {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-home-grow:hover,
+.hvr-home-grow:focus,
+.hvr-home-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Slabo+27px");
+.cloud-text {
+    font-family: "Berkshire Swash";
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/clouds.jpg);
+    background-size: auto;
+    background-attachment: unset;
+    background-position: 0%;
+    font-size: 80px;
+    margin-bottom: 5%;
+    animation: clouds-moving infinite 70s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    text-align: center;
+}
+
+@keyframes clouds-moving {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}

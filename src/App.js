@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from "react";
 import {BrowserRouter} from "react-router-dom";
 import jwt from "jsonwebtoken";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Routes from "./Routes";
 import NavBar from "./NavBar";
 import JoblyApi from "./api";
 import UserContext from "./UserContext";
+import { Container } from "reactstrap";
 
 function App() {
 
@@ -77,7 +78,9 @@ function App() {
     <BrowserRouter>
       <UserContext.Provider value={ currentUser }>
         <NavBar handleSignOut={handleSignOut}/>
-        <Routes handleSignUp={handleSignUp} handleSignIn={handleSignIn} handleApply={handleApply} />
+        <Container className="themed-container" fluid={true}>
+          <Routes handleSignUp={handleSignUp} handleSignIn={handleSignIn} handleApply={handleApply} />
+        </Container>
       </UserContext.Provider>
     </BrowserRouter>
   );
