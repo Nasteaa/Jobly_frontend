@@ -1,0 +1,31 @@
+.about {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    margin: 15px;
+}
+
+.link {
+    color: rgb(140, 163, 240);
+}
+
+.link:hover {
+    color: #1f568a !important;
+}
+
+.centered {
+    text-align: center;
+    font-size: 28px;
+}
+
+
+.about-container {
+    padding: 2%;
+    color: #1f568a;
+    border-radius: 2%/3%;
+    width: 40%;
+    position: absolute;
+    top: 20vh;
+    left: 30%;
+    /* border: 2px solid #1f568a; */
+}

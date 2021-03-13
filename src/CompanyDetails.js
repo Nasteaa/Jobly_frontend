@@ -34,10 +34,12 @@ function CompanyDetails({handleApply}) {
   }
 
   return (
-    <div>
-    <h3>{companyName}</h3>
-    <p>{companyDescription}</p>
-    {renderJobs()}
+    <div className="content">
+      <div className="selected-company">
+        <h3>{companyName}</h3>
+        <p>{companyDescription}</p>
+      </div>
+      {renderJobs()}
     </div>
   );
 }

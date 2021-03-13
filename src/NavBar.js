@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import UserContext from "./UserContext";
 import './NavBar.css';
 import { NavLink as NL } from 'reactstrap';
-import { Navbar, NavbarBrand, Nav, Collapse, NavItem, NavbarToggler } from 'reactstrap';
+import { Navbar, Nav, Collapse, NavbarToggler } from 'reactstrap';
 
 
 

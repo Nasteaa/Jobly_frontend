@@ -2,6 +2,7 @@
     color: #28527a;
     background-color: #faf3e0;
     border: 2px solid #28527a;
+    border-radius: 10%/20%;
 }
 
 .btn:hover {
@@ -10,20 +11,16 @@
     border: 2px solid white;
 }
 
-.label {
-    color:  #faf3e0;
-    font-size: 20px;
-}
-
 
 .login-container {
-    padding: 2%;
-    background-color: #1f568a;
-    border-radius: 2%/3%;
-    width: 40%;
-    position: absolute;
-    top: 20vh;
-    left: 30%;
+   padding: 2%;
+  color: #1f568a;
+  border-radius: 2%/3%;
+  width: 40%;
+  position: absolute;
+  top: 20vh;
+  left: 30%;
+  border: 2px solid #1f568a;
 }
 
 .sign-up-border {
@@ -32,7 +29,7 @@
 }
 
 .label {
-    color:  #faf3e0;
+    color: #28527a;
     font-size: 20px;
 }
 

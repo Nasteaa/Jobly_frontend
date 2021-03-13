@@ -3,8 +3,9 @@ import JoblyApi from "./api";
 import Job from "./Job";
 import { Button, Form, Input } from "reactstrap";
 import UserContext from "./UserContext";
+import "./JobList.css";
 
-function JobList({handleApply}) {
+function JobList({ handleApply }) {
   const currentUser = useContext(UserContext);
 
   let initialFormState = { query: "" };
@@ -30,7 +31,7 @@ function JobList({handleApply}) {
   }
 
   function handleChange(evt) {
-    const {name, value} = evt.target;
+    const { name, value } = evt.target;
     setFormData(data => ({
       ...data,
       [name]: value
@@ -45,8 +46,8 @@ function JobList({handleApply}) {
       // O(M)
       // O(M) + O(N)
       return jobs.map(job => (
-        <Job id={job.id} title={job.title} companyName={job.companyName} salary={job.salary} equity={job.equity} 
-        hasApplied={appliedJobIds.includes(job.id)} handleApply={handleApply}/>
+        <Job id={job.id} title={job.title} companyName={job.companyName} salary={job.salary} equity={job.equity}
+          hasApplied={appliedJobIds.includes(job.id)} handleApply={handleApply} />
       ))
     }
   }
@@ -54,15 +55,15 @@ function JobList({handleApply}) {
 
 
   return (
-     <div className="content">
+    <div className="content">
       <div className="form-container">
-      <Form inline className="content-form" onSubmit={handleSubmit}>
-        <Input className="w-50" name="query" onChange={ handleChange } value={ formData.query } placeholder="Enter search term" bsSize="lg"/>
-        <Button className="content-btn" type="submit">Search</Button>
-      </Form>
+        <Form inline className="content-form" onSubmit={handleSubmit}>
+          <Input className="w-50" name="query" onChange={handleChange} value={formData.query} placeholder="Enter search term" bsSize="lg" />
+          <Button className="content-btn" type="submit">Search</Button>
+        </Form>
       </div>
-    { renderJobs() }
-  </div>
+      { renderJobs()}
+    </div>
   );
 }
 

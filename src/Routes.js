@@ -1,18 +1,21 @@
 import React from "react";
 import {Switch, Route, Redirect} from "react-router-dom";
-
 import Homepage from "./Homepage";
 import CompanyList from "./CompanyList";
 import CompanyDetails from "./CompanyDetails";
 import JobList from "./JobList";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
+import About from "./About";
 
 function Routes({handleSignUp, handleApply, handleSignIn}) {
   return (
     <Switch>
       <Route exact path="/">
         <Homepage />
+      </Route>
+      <Route exact path="/about">
+        <About />
       </Route>
       <Route exact path="/companies">
         <CompanyList />

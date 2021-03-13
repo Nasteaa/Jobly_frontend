@@ -13,8 +13,8 @@ function Homepage() {
     }
     return (
       <div>
-        <div className="fade-in">
-          <div className="login-container hvr-home-grow">
+        <div>
+          <div className="login-container">
             <h1 className="cloud-text hvr-home-grow">Welcome to Jobly</h1>
           </div>
         </div>

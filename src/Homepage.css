@@ -1,20 +1,16 @@
-div {
-    font-family: 'Slabo 27px', serif;
-}
-
 .fade-in {
     position: relative;
     display: flex;
     text-align: center;
-    -webkit-animation: fadein 8s forwards;
+    -webkit-animation: fadein 3s forwards;
     /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 8s forwards;
+    -moz-animation: fadein 3s forwards;
     /* Firefox < 16 */
-    -ms-animation: fadein 8s forwards;
+    -ms-animation: fadein 3s forwards;
     /* Internet Explorer */
-    -o-animation: fadein 8s forwards;
+    -o-animation: fadein 3s forwards;
     /* Opera < 12.1 */
-    animation: fadein 8s forwards;
+    animation: fadein 3s forwards;
     z-index: 1;
 }
 
@@ -68,12 +64,12 @@ div {
     transform: scale(1.1);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Slabo+27px");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab");
 .cloud-text {
-    font-family: "Berkshire Swash";
+    font-family: "Roboto Slab";
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/clouds.jpg);
+    background-image: linear-gradient(0deg, rgba(32, 61, 227, 0.3), rgba(93, 97, 230, 0.3)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/clouds.jpg);
     background-size: auto;
     background-attachment: unset;
     background-position: 0%;
