@@ -17,6 +17,7 @@
     "react-scripts": "4.0.1",
     "react-strap": "0.0.1",
     "reactstrap": "^8.9.0",
+    "sequelize": "^6.6.0",
     "use-sound": "^2.0.1",
     "web-vitals": "^0.2.4"
   },
